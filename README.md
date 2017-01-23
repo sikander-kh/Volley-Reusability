@@ -6,6 +6,8 @@
     
     compile 'com.android.support:appcompat-v7:24.2.0'
     compile 'com.android.support:design:24.2.0'
-    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
+    
     compile 'com.google.code.gson:gson:2.2.4'
+    
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
     }
