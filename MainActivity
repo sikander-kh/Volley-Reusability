@@ -15,13 +15,28 @@ import com.appcode.VolleyWebService;
 
 public class MainActivity extends AppCompatActivity {
 
+private Button buttonApiCall;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) 
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        VolleyWebService.makeJsonObjectRequest(SignupActivity.this, Request.Method.POST, url, jsonObject, new VolleyResponseListener()
+        buttonApiCall=(Button) findViewById(R.id.buttonApiCall);
+        
+        
+        buttonApiCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            apiCall(); //Post call method
+            }
+        });
+    }
+    
+    public void apiCall()
+    {
+    VolleyWebService.makeJsonObjectRequest(SignupActivity.this, Request.Method.POST, url, jsonObject, new VolleyResponseListener()
         {
             @Override
             public void onResponse(JSONObject response) {
