@@ -36,6 +36,7 @@ private Button buttonApiCall;
     
     public void apiCall()
     {
+    // url = // put your base url like this "http://www.appcodeinfotech.com/front/login"
     VolleyWebService.makeJsonObjectRequest(SignupActivity.this, Request.Method.POST, url, jsonObject, new VolleyResponseListener()
         {
             @Override
