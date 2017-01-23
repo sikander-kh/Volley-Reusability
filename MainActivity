@@ -37,7 +37,7 @@ private Button buttonApiCall;
     public void apiCall()
     {
     // url = // put your base url like this "http://www.appcodeinfotech.com/front/login"
-    VolleyWebService.makeJsonObjectRequest(SignupActivity.this, Request.Method.POST, url, jsonObject, new VolleyResponseListener()
+    VolleyWebService.makeJsonObjectRequest(MainActivity.this, Request.Method.POST, url, jsonObject, new VolleyResponseListener()
         {
             @Override
             public void onResponse(JSONObject response) {
@@ -46,7 +46,7 @@ private Button buttonApiCall;
 
             @Override
             public void onError(String message) {
-                Toast.makeText(SignupActivity.this, "Some Error fetching Data !!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Some Error fetching Data !!", Toast.LENGTH_SHORT).show();
             }
         });
     }
